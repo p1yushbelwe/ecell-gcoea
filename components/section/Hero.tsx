@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import Navbar from "../layout/Navbar";
 import { FaCircleDot, FaHandPointer } from "react-icons/fa6";
-import AeroShards from "../AeroShards";
+import { AuroraText } from "../ui/aurora-text";
 
 export default function Hero() {
   return (
@@ -52,7 +52,11 @@ export default function Hero() {
             {/* Main Title */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-4 sm:mb-4">
               <span className="text-neutral-100">The</span>{" "}
-              <span className="text-blue-500/90">Entrepreneurship Cell</span>
+              {/* <span className="text-blue-500/90">Entrepreneurship Cell</span> */}
+              <AuroraText
+              colors={['#1D4ED8','#3B82F6', '#7DD3FC']}
+              speed={2.5}
+              >Entrepreneurship Cell</AuroraText>
             </h1>
 
             {/* College Name */}

@@ -30,7 +30,7 @@ const people = [
 
 export default function Team() {
   return (
-    <div className="bg-neutral-950/98 font-inter">
+    <div className="bg-neutral-950/98 font-inter min-h-dvh">
       <div className="flex flex-col items-center">
         <h1 className="text-neutral-100 tracking-tight text-center text-3xl">
           Meet our team
@@ -66,7 +66,7 @@ export default function Team() {
           ))}{" "}
         </div>
         <div className="flex justify-center items-center">
-          <button className="text-center bg-blue-700 text-neutral-50 shadow-xs rounded-lg text-base sm:text-sm font-normal px-4 py-1 tracking-tight active:scale-98 hover:bg-blue-700/90 transition duration-150 cursor-pointer">
+          <button className="mb-8 text-center bg-blue-700 text-neutral-50 shadow-xs rounded-lg text-base sm:text-sm font-normal px-4 py-1 tracking-tight active:scale-98 hover:bg-blue-700/90 transition duration-150 cursor-pointer">
             <p>View Team</p>
           </button>
         </div>

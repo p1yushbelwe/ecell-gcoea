@@ -7,6 +7,9 @@ import Link from "next/link";
 import Events from "@/components/section/Events";
 import Speaker from "@/components/section/Speaker";
 import Team from "@/components/section/Team";
+// import Reach from "@/components/section/Contact";
+import Contact from "@/components/section/Contact";
+import Footer from "@/components/section/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +20,8 @@ export default function Home() {
       <Events />
       <Speaker />
       <Team />
+      <Contact />
+      <Footer />
     </div>
   );
 }

@@ -46,7 +46,7 @@ export default function About() {
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="rounded-xl border border-neutral-700/80 bg-neutral-900/60 p-5 flex flex-col gap-2">
                 <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-100">
-                  7+ Years
+                  4+ Years
                 </h3>
                 <p className="text-sm text-neutral-400 leading-relaxed">
                   Building community and connections for over 7 years.
@@ -64,7 +64,7 @@ export default function About() {
 
               <div className="rounded-xl border border-neutral-700/80 bg-neutral-900/60 p-5 flex flex-col gap-2">
                 <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-100">
-                  120+ Members
+                  80+ Members
                 </h3>
                 <p className="text-sm text-neutral-400 leading-relaxed">
                   A growing community of 120+ dedicated members.
