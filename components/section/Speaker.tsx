@@ -16,29 +16,29 @@ type GalleryItem = {
   label2: string;
 };
 
-const items: GalleryItem[] = [
+const items = [
   {
-    image: "/speakers/sameerkubde.webp",
+    image: "https://ik.imagekit.io/feid7f6mz/speakers/sameerkubde.webp",
     label: "Sameer Kubde",
     label2: "Owner, Kubde Jewellers",
   },
   {
-    image: "/speakers/rmmetkar.webp",
+    image: "https://ik.imagekit.io/feid7f6mz/speakers/rmmetkar.webp",
     label: "Prof. R. M. Metkar",
     label2: "Dean, GCoE Amravati",
   },
   {
-    image: "/speakers/chandanjha.webp",
+    image: "https://ik.imagekit.io/feid7f6mz/speakers/chandanjha.webp",
     label: "Mr. Chandan Jha",
     label2: "AVP @GeeksforGeeks",
   },
   {
-    image: "/speakers/sachinjadhao.webp",
+    image: "https://ik.imagekit.io/feid7f6mz/speakers/sachinjadhao.webp",
     label: "Sachin Jadhao",
     label2: "Owner, RM Industries",
   },
   {
-    image: "/speakers/ranjitband.webp",
+    image: "https://ik.imagekit.io/feid7f6mz/speakers/ranjitband.webp",
     label: "Ranjit Band",
     label2: "Alumnus GCoE Amravati",
   },

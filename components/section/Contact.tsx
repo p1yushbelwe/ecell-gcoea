@@ -92,7 +92,7 @@ export default function Contact() {
                 <Link href={LinkedinLink}><FaLinkedin /></Link>
               </li>
               <li className="rounded-sm  p-1 bg-neutral-200 text-zinc-900 hover:bg-neutral-200/90 transition active:scale-98 duration-150 cursor-pointer">
-                <Link href={FacebookLink}><FaFacebook /></Link>
+                <Link href={FacebookLink}><FaFacebook />  </Link>
               </li>
             </ul>
           </div>

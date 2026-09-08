@@ -12,7 +12,7 @@ export default function About() {
 <div className="flex-1 w-full max-w-md lg:max-w-xl mx-auto order-1 lg:order-2">
   <div className="relative aspect-video rounded-2xl overflow-hidden bg-neutral-900/60 border border-neutral-800 shadow-xl">
     <Image
-      src="/events/pitchers1.webp"
+      src="https://ik.imagekit.io/feid7f6mz/events/pitchers1.jpg"
       alt="E-Cell GCOEA Logo"
       fill
       className="object-cover p-2 rounded-2xl"
@@ -50,7 +50,7 @@ export default function About() {
                   4+ Years
                 </h3>
                 <p className="text-sm text-neutral-400 leading-relaxed">
-                  Building community and connections for over 7 years.
+                  Building community and connections for over 4+ years.
                 </p>
               </div>
 
@@ -68,7 +68,7 @@ export default function About() {
                   80+ Members
                 </h3>
                 <p className="text-sm text-neutral-400 leading-relaxed">
-                  A growing community of 120+ dedicated members.
+                  A growing community of 80+ dedicated members.
                 </p>
               </div>
             </div>

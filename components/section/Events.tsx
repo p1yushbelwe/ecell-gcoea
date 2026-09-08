@@ -6,29 +6,32 @@ import Image from "next/image";
 export default function Events() {
   const items = [
     {
-      image: "/events/pitchers1.webp",
+      image: "https://ik.imagekit.io/feid7f6mz/events/pitchers1.jpg",
       label: "Pitchers Game 2026",
     },
     {
-      image: "/events/pitchers2.webp",
+      image: "https://ik.imagekit.io/feid7f6mz/events/pitchers2.webp",
       label: "Pitchers Game 2026",
     },
     {
-      image: "/events/esammelan1.webp",
+      image: "https://ik.imagekit.io/feid7f6mz/events/esammelan1.webp",
       label: "E-Sammelan 2025",
     },
     {
-      image: "/events/nec1.webp",
+      image: "https://ik.imagekit.io/feid7f6mz/events/nec1.webp",
       label: "National Entrepreneurship Challenge 25",
     },
     {
-      image: "/events/esammelan2.webp",
+      image: "https://ik.imagekit.io/feid7f6mz/events/esammelan2.webp",
       label: "E-Sammelan 2025",
     },
   ];
-
+  // https://ik.imagekit.io/feid7f6mz/events/esammelan2.webp?updatedAt=1788881085694
   return (
-    <div id="events" className="font-inter sm:min-h-dvh bg-neutral-950/98 px-4 pt-16 sm:p-16">
+    <div
+      id="events"
+      className="font-inter sm:min-h-dvh bg-neutral-950/98 px-4 pt-16 sm:p-16"
+    >
       <h1 className="text-3xl sm:text-4xl text-neutral-100 tracking-tighter font-semibold">
         Events and Programs
       </h1>
@@ -46,10 +49,10 @@ export default function Events() {
         <AccordionGallery
           items={items}
           defaultIndex={0}
-          expandRatio={0.50}
+          expandRatio={0.5}
           trigger="hover"
           accentColor="#ffffff"
-          // overlayColor="#0a0a0a"
+          overlayColor="none"
           textColor="#ffffff"
           grayscale
           showLabels
@@ -96,7 +99,6 @@ export default function Events() {
       <div>
         <button className="text-center mb-16 sm:mb-4 bg-blue-700 text-neutral-50 shadow-xs rounded-sm text-base sm:text-sm font-normal px-4 py-1 tracking-tight active:scale-98 hover:bg-blue-700/90 transition duration-150 cursor-pointer mt-2 sm:mt-8">
           <p className="flex justify-center items-center gap-1">
-            
             Explore More <FaArrowRight />
           </p>
         </button>

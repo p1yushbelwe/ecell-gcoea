@@ -15,7 +15,7 @@ export default function Navbar() {
       {/* Logo + Text (always visible) */}
       <div className="flex items-center gap-2 sm:gap-3">
         <Image
-          src={`/ecellLogo.webp?v=1`}
+          src={`https://ik.imagekit.io/feid7f6mz/ecellLogo.webp`}
           alt="E-Cell GCOEA Logo"
           width={48}
           height={48}
