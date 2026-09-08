@@ -13,32 +13,34 @@ import {
 type GalleryItem = {
   image: string;
   label: string;
+  label2: string;
 };
 
 const items: GalleryItem[] = [
   {
-    image: "https://picsum.photos/id/1015/900/1200",
-    label: "Canyon",
+    image: "/speakers/sameerkubde.webp",
+    label: "Sameer Kubde",
+    label2: "Owner, Kubde Jewellers",
   },
   {
-    image: "https://picsum.photos/id/1018/900/1200",
-    label: "Ridgeline",
+    image: "/speakers/rmmetkar.webp",
+    label: "Prof. R. M. Metkar",
+    label2: "Dean, GCoE Amravati",
   },
   {
-    image: "https://picsum.photos/id/1039/900/1200",
-    label: "Falls",
+    image: "/speakers/chandanjha.webp",
+    label: "Mr. Chandan Jha",
+    label2: "AVP @GeeksforGeeks",
   },
   {
-    image: "https://picsum.photos/id/1043/900/1200",
-    label: "Harbour",
+    image: "/speakers/sachinjadhao.webp",
+    label: "Sachin Jadhao",
+    label2: "Owner, RM Industries",
   },
   {
-    image: "https://picsum.photos/id/1044/900/1200",
-    label: "Skyline",
-  },
-  {
-    image: "https://picsum.photos/id/1044/900/1200",
-    label: "Skyline",
+    image: "/speakers/ranjitband.webp",
+    label: "Ranjit Band",
+    label2: "Alumnus GCoE Amravati",
   },
 ];
 
@@ -58,7 +60,6 @@ export default function Speaker() {
           plugins={[
             Autoplay({
               delay: 1500,
-              
             }),
           ]}
         >
@@ -79,8 +80,11 @@ export default function Speaker() {
                     <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <p className="text-xl font-medium text-white">
+                      <p className="text-xl font-medium tracking-tight text-neutral-50">
                         {item.label}
+                      </p>
+                      <p className="text-md font-normal text-neutral-200">
+                        {item.label2}
                       </p>
                     </div>
                   </div>

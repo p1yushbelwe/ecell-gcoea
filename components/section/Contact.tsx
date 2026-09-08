@@ -18,6 +18,11 @@ import {
 import { FaFaceAngry, FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
 
+const LinkedinLink = "https://in.linkedin.com/company/e-cell-gcoea"
+const YoutubeLink = "https://www.youtube.com/@e-cellgcoea"
+const InstagramLink = "https://www.instagram.com/ecellgcoea/"
+const FacebookLink = "https://www.facebook.com/ecellgcoea/"
+
 
 const maps = "https://maps.app.goo.gl/1KhJ281hVddNUrLV9"
 export default function Contact() {
@@ -78,16 +83,16 @@ export default function Contact() {
           >
             <ul className="flex gap-3 text-2xl sm:text-lg ">
               <li className="rounded-sm  p-1 bg-neutral-200 text-zinc-900 hover:bg-neutral-200/90 transition active:scale-98 duration-150 cursor-pointer">
-                <FaInstagram />
+                <Link href={InstagramLink}><FaInstagram /></Link>
               </li>
               <li className="rounded-sm  p-1 bg-neutral-200 text-zinc-900 hover:bg-neutral-200/90 transition active:scale-98 duration-150 cursor-pointer">
-                <FaYoutube />
+                <Link href={YoutubeLink}><FaYoutube /></Link>
               </li>
               <li className="rounded-sm  p-1 bg-neutral-200 text-zinc-900 hover:bg-neutral-200/90 transition active:scale-98 duration-150 cursor-pointer">
-                <FaLinkedin />
+                <Link href={LinkedinLink}><FaLinkedin /></Link>
               </li>
               <li className="rounded-sm  p-1 bg-neutral-200 text-zinc-900 hover:bg-neutral-200/90 transition active:scale-98 duration-150 cursor-pointer">
-                <FaFacebook />
+                <Link href={FacebookLink}><FaFacebook /></Link>
               </li>
             </ul>
           </div>

@@ -28,7 +28,7 @@ export default function Events() {
   ];
 
   return (
-    <div className="font-inter sm:min-h-dvh bg-neutral-950/98 px-4 pt-16 sm:p-16">
+    <div id="events" className="font-inter sm:min-h-dvh bg-neutral-950/98 px-4 pt-16 sm:p-16">
       <h1 className="text-3xl sm:text-4xl text-neutral-100 tracking-tighter font-semibold">
         Events and Programs
       </h1>

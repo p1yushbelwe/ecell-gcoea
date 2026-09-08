@@ -1,17 +1,38 @@
-import Link from "next/link";
+"use client";
+
 import {
   FaInstagram,
-  FaTwitter,
-  FaGithub,
   FaLinkedin,
   FaMapMarkerAlt,
+  FaFacebook,
+  FaYoutube,
 } from "react-icons/fa";
+
+const scrollToSection = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
+
+const LinkedinLink =
+  "https://in.linkedin.com/company/e-cell-gcoea";
+
+const YoutubeLink =
+  "https://www.youtube.com/@e-cellgcoea";
+
+const InstagramLink =
+  "https://www.instagram.com/ecellgcoea/";
+
+const FacebookLink =
+  "https://www.facebook.com/ecellgcoea/";
 
 export default function Footer() {
   return (
     <footer className="bg-zinc-950 text-neutral-200 font-inter">
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-16">
+
           {/* Section 1 — Brand / Social */}
           <div className="space-y-5">
             <h2 className="text-2xl font-semibold tracking-tight text-shadow-[0_2px_8px_rgba(255,255,255,0.15)]">
@@ -19,13 +40,13 @@ export default function Footer() {
             </h2>
 
             <p className="max-w-sm text-sm leading-6 text-neutral-400 text-shadow-[0_1px_5px_rgba(0,0,0,0.5)]">
-              Building ideas, creating experiences, and bringing people together
-              through technology and innovation.
+              Building ideas, creating experiences, and bringing people
+              together through technology and innovation.
             </p>
 
             <div className="flex items-center gap-4 pt-2">
               <a
-                href="https://instagram.com"
+                href={InstagramLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -35,27 +56,27 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://twitter.com"
+                href={FacebookLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
+                aria-label="Facebook"
                 className="text-neutral-400 transition-all duration-300 hover:-translate-y-1 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
-                <FaTwitter size={20} />
+                <FaFacebook size={20} />
               </a>
 
               <a
-                href="https://github.com"
+                href={YoutubeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
+                aria-label="Youtube"
                 className="text-neutral-400 transition-all duration-300 hover:-translate-y-1 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
               >
-                <FaGithub size={20} />
+                <FaYoutube size={20} />
               </a>
 
               <a
-                href="https://linkedin.com"
+                href={LinkedinLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -73,33 +94,33 @@ export default function Footer() {
             </h3>
 
             <nav className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
-              <Link
-                href="/events"
+              <button
+                onClick={() => scrollToSection("events")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 Events
-              </Link>
+              </button>
 
-              <Link
-                href="/about"
+              <button
+                onClick={() => scrollToSection("about")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 About
-              </Link>
+              </button>
 
-              <Link
-                href="/team"
+              <button
+                onClick={() => scrollToSection("team")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 Team
-              </Link>
+              </button>
 
-              <Link
-                href="/contact"
+              <button
+                onClick={() => scrollToSection("contact")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 Contact
-              </Link>
+              </button>
             </nav>
           </div>
 
@@ -116,7 +137,9 @@ export default function Footer() {
               />
 
               <address className="not-italic text-sm leading-6 text-neutral-400 text-shadow-[0_1px_5px_rgba(0,0,0,0.5)]">
-                <span className="text-neutral-200 tracking-tight font-semibold">E-CELL GCOEA</span>
+                <span className="text-neutral-200 tracking-tight font-semibold">
+                  E-CELL GCOEA
+                </span>
                 <br />
                 Government College of Engineering
                 <br />
