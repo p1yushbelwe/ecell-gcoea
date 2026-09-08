@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="bg-neutral-950 min-h-dvh font-inter">
+    <section className="bg-neutral-950 min-h-dvh font-inter" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
         
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
@@ -12,11 +12,12 @@ export default function About() {
 <div className="flex-1 w-full max-w-md lg:max-w-xl mx-auto order-1 lg:order-2">
   <div className="relative aspect-video rounded-2xl overflow-hidden bg-neutral-900/60 border border-neutral-800 shadow-xl">
     <Image
-      src="/ecellLogo.webp"
+      src="/events/pitchers1.webp"
       alt="E-Cell GCOEA Logo"
       fill
-      className="object-contain p-8 sm:p-10 lg:p-12"
+      className="object-cover p-2 rounded-2xl"
       priority
+      
     />
   </div>
 </div>

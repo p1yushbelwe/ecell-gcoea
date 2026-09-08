@@ -1,6 +1,14 @@
 "use client";
 
-import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 type GalleryItem = {
   image: string;
@@ -35,172 +43,57 @@ const items: GalleryItem[] = [
 ];
 
 export default function Speaker() {
-  const sliderRef = useRef<HTMLDivElement | null>(null);
-
-  const isDragging = useRef<boolean>(false);
-  const startX = useRef<number>(0);
-  const startScroll = useRef<number>(0);
-  const lastX = useRef<number>(0);
-  const velocity = useRef<number>(0);
-  const animation = useRef<number | null>(null);
-  const lastTime = useRef<number>(0);
-
-  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    const slider = sliderRef.current;
-
-    if (!slider) return;
-
-    if (animation.current !== null) {
-      cancelAnimationFrame(animation.current);
-    }
-
-    isDragging.current = true;
-
-    startX.current = e.clientX;
-    startScroll.current = slider.scrollLeft;
-
-    lastX.current = e.clientX;
-    lastTime.current = performance.now();
-
-    velocity.current = 0;
-
-    slider.setPointerCapture(e.pointerId);
-  };
-
-  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (!isDragging.current) return;
-
-    const slider = sliderRef.current;
-
-    if (!slider) return;
-
-    const now = performance.now();
-
-    const deltaX = e.clientX - lastX.current;
-    const deltaTime = now - lastTime.current;
-
-    const distance = e.clientX - startX.current;
-
-    slider.scrollLeft = startScroll.current - distance;
-
-    if (deltaTime > 0) {
-      velocity.current = deltaX / deltaTime;
-    }
-
-    lastX.current = e.clientX;
-    lastTime.current = now;
-  };
-
-  const startMomentum = () => {
-    const slider = sliderRef.current;
-
-    if (!slider) return;
-
-    const friction = 0.94;
-
-    const animate = () => {
-      if (Math.abs(velocity.current) < 0.01) {
-        animation.current = null;
-        return;
-      }
-
-      slider.scrollLeft -= velocity.current * 16;
-
-      velocity.current *= friction;
-
-      animation.current = requestAnimationFrame(animate);
-    };
-
-    animation.current = requestAnimationFrame(animate);
-  };
-
-  const handlePointerUp = () => {
-    if (!isDragging.current) return;
-
-    isDragging.current = false;
-
-    startMomentum();
-  };
-
   return (
-    <div className="font-inter min-h-[70dvh] bg-neutral-950/98">
-      <h1 className="text-center text-neutral-100 text-4xl font-bold tracking-tight">
-        Past Speakers
+    <section className="bg-neutral-950/98 px-4 py-4 font-inter">
+      <h1 className="text-center text-3xl font-medium tracking-tighter text-neutral-100  *:bg-blue-700 text-shadow-2xs sm:text-3xl">
+        <span className="px-4 py-2">Past Speakers and Guests</span>
       </h1>
 
-      <div
-        ref={sliderRef}
-        onPointerDown={handlePointerDown}
-        onPointerMove={handlePointerMove}
-        onPointerUp={handlePointerUp}
-        onPointerCancel={handlePointerUp}
-        className="
-          flex
-          gap-4
-          px-4 sm:px-8
-          mt-2
-          overflow-x-auto
-          scrollbar-none
-          cursor-grab
-          active:cursor-grabbing
-          select-none
-          touch-pan-x
-        "
-      >
-        {items.map((item, i) => (
-          <div
-            key={i}
-            className="
-              relative
-              mt-8
-              shrink-0
-              w-[75vw] sm:w-64 lg:w-72
-              h-[50dvh] sm:h-72
-              overflow-hidden
-              rounded-xl
-            "
-          >
-            <img
-              src={item.image}
-              alt={item.label}
-              draggable={false}
-              className="
-                w-full
-                h-full
-                object-cover
-                pointer-events-none
-              "
-            />
+      <div className="mx-4 sm:mx-auto mt-10 max-w-6xl">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 1500,
+              
+            }),
+          ]}
+        >
+          <CarouselContent className="">
+            {items.map((item, i) => (
+              <CarouselItem
+                key={i}
+                className="basis-full pl-4 sm:basis-1/2 lg:basis-1/3"
+              >
+                <div className="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 shadow-xl">
+                  <div className="relative aspect-4/5 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
 
-            {/* Overlay */}
-            <div
-              className="
-                absolute
-                inset-0
-                bg-linear-to-t
-                from-black/80
-                via-black/10
-                to-transparent
-                pointer-events-none
-              "
-            />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
 
-            {/* Label */}
-            <div
-              className="
-                absolute
-                bottom-0
-                left-0
-                w-full
-                p-5
-                pointer-events-none
-              "
-            >
-              <h2 className="text-white text-2xl font-bold">{item.label}</h2>
-            </div>
-          </div>
-        ))}
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <p className="text-xl font-medium text-white">
+                        {item.label}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          <CarouselPrevious className="left-2 h-10 w-10 border-none bg-white text-neutral-900 shadow-lg hover:bg-neutral-100 sm:-left-5" />
+
+          <CarouselNext className="right-2 h-10 w-10 border-none bg-white text-neutral-900 shadow-lg hover:bg-neutral-100 sm:-right-5" />
+        </Carousel>
       </div>
-    </div>
+    </section>
   );
 }

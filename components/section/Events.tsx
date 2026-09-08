@@ -6,49 +6,56 @@ import Image from "next/image";
 export default function Events() {
   const items = [
     {
-      image: "https://picsum.photos/id/1015/900/1200",
-      label: "Canyon",
+      image: "/events/pitchers1.webp",
+      label: "Pitchers Game 2026",
     },
     {
-      image: "https://picsum.photos/id/1018/900/1200",
-      label: "Ridgeline",
+      image: "/events/pitchers2.webp",
+      label: "Pitchers Game 2026",
     },
     {
-      image: "https://picsum.photos/id/1039/900/1200",
-      label: "Falls",
+      image: "/events/esammelan1.webp",
+      label: "E-Sammelan 2025",
     },
     {
-      image: "https://picsum.photos/id/1043/900/1200",
-      label: "Harbour",
+      image: "/events/nec1.webp",
+      label: "National Entrepreneurship Challenge 25",
     },
     {
-      image: "https://picsum.photos/id/1044/900/1200",
-      label: "Skyline",
+      image: "/events/esammelan2.webp",
+      label: "E-Sammelan 2025",
     },
   ];
 
   return (
-    <div className="font-inter min-h-dvh bg-neutral-950/98 p-4 sm:p-16">
-      <h1 className="text-3xl sm:text-5xl text-neutral-100 tracking-tighter font-semibold underline">
+    <div className="font-inter sm:min-h-dvh bg-neutral-950/98 px-4 pt-16 sm:p-16">
+      <h1 className="text-3xl sm:text-4xl text-neutral-100 tracking-tighter font-semibold">
         Events and Programs
       </h1>
       <br />
+      <p className="text-neutral-500 text-pretty  md:w-3/4">
+        Discover our upcoming events and ongoing programs designed to inspire,
+        connect, and create lasting impact. From workshops and community
+        gatherings to specialized initiatives, there’s something for everyone.
+        Stay updated, get involved, and be part of meaningful experiences that
+        matter.
+      </p>
       <br />
       {/* Desktop */}
       <div className="hidden md:block">
         <AccordionGallery
           items={items}
-          defaultIndex={2}
-          expandRatio={0.52}
+          defaultIndex={0}
+          expandRatio={0.50}
           trigger="hover"
           accentColor="#ffffff"
-          overlayColor="#060010"
+          // overlayColor="#0a0a0a"
           textColor="#ffffff"
           grayscale
           showLabels
-          duration={0.2}
+          duration={0.6}
           ease="power3.out"
-          parallax={0.1}
+          parallax={0.4}
           tilt={8}
           stagger={0.06}
           height={460}
@@ -73,11 +80,11 @@ export default function Events() {
             />
 
             {/* Gradient */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/1 to-transparent" />
 
             {/* Text */}
-            <div className="absolute bottom-0 left-0 p-5">
-              <h2 className="text-2xl font-semibold tracking-tight text-white">
+            <div className="absolute bottom-0 left-0 px-5 py-2">
+              <h2 className="text-2xl font-medium tracking-tight text-neutral-100">
                 {item.label}
               </h2>
             </div>
@@ -87,8 +94,9 @@ export default function Events() {
 
       {/* <br /> */}
       <div>
-        <button className="text-center mb-16 sm:mb-4 bg-blue-700 text-neutral-50 shadow-xs rounded-lg text-base sm:text-sm font-normal px-4 py-1 tracking-tight active:scale-98 hover:bg-blue-700/90 transition duration-150 cursor-pointer mt-2 sm:mt-8">
+        <button className="text-center mb-16 sm:mb-4 bg-blue-700 text-neutral-50 shadow-xs rounded-sm text-base sm:text-sm font-normal px-4 py-1 tracking-tight active:scale-98 hover:bg-blue-700/90 transition duration-150 cursor-pointer mt-2 sm:mt-8">
           <p className="flex justify-center items-center gap-1">
+            
             Explore More <FaArrowRight />
           </p>
         </button>

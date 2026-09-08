@@ -1,5 +1,13 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
+
+const scrollToSection = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
 
 export default function Navbar() {
   return (
@@ -24,6 +32,9 @@ export default function Navbar() {
         {["About", "Events", "Team", "Contact"].map((item) => (
           <li key={item}>
             <button
+              onClick={() => {
+                scrollToSection(item.toLowerCase());
+              }}
               className="px-3 py-1.5 text-sm lg:text-base text-neutral-200 
                          rounded-md hover:bg-neutral-800 hover:text-white 
                          transition-colors duration-200"
