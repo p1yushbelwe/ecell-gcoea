@@ -87,7 +87,7 @@ export default function Events() {
 
       {/* <br /> */}
       <div>
-        <button className="text-center bg-blue-700 text-neutral-50 shadow-xs rounded-lg text-base sm:text-sm font-normal px-4 py-1 tracking-tight active:scale-98 hover:bg-blue-700/90 transition duration-150 cursor-pointer mt-2 sm:mt-4">
+        <button className="text-center mb-16 sm:mb-4 bg-blue-700 text-neutral-50 shadow-xs rounded-lg text-base sm:text-sm font-normal px-4 py-1 tracking-tight active:scale-98 hover:bg-blue-700/90 transition duration-150 cursor-pointer mt-2 sm:mt-8">
           <p className="flex justify-center items-center gap-1">
             Explore More <FaArrowRight />
           </p>

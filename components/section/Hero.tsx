@@ -20,12 +20,12 @@ export default function Hero() {
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <DotGrid
-            dotSize={4}
-            gap={18}
-            baseColor="#2F293A"
-            activeColor="#5227FF"
-            proximity={100}
-            shockRadius={0}
+            dotSize={3}
+            gap={15}
+            baseColor="#404040"
+            activeColor="#73C6FB"
+            proximity={110}
+            shockRadius={1}
             shockStrength={0}
             resistance={1000}
             returnDuration={0}

@@ -30,7 +30,7 @@ const people = [
 
 export default function Team() {
   return (
-    <div className="bg-neutral-950/98 font-inter min-h-dvh">
+    <div className="bg-neutral-950/98 font-inter min-h-dvh pt-10">
       <div className="flex flex-col items-center">
         <h1 className="text-neutral-100 tracking-tight text-center text-3xl">
           Meet our team

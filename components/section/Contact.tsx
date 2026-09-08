@@ -2,7 +2,7 @@ import { FaEnvelope, FaLocationArrow, FaTwitter } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <div className="min-h-dvh bg-neutral-950/99 font-inter">
+    <div className="min-h-[80dvh] pb-16 bg-neutral-950/99 font-inter">
       <h1 className="tracking-tight text-center text-shadow-neutral-50 text-neutral-100 px-8 text-4xl font-medium pt-12">
         Reach us
       </h1>
