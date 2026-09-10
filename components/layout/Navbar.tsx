@@ -45,7 +45,7 @@ export default function Navbar() {
       </div>
 
       {/* Navigation Links - Hidden on mobile */}
-      <p id="c" className="flex  justify-center items-center gap-1 selection:none cursor:pointer m:hidden text-base bg-blue-700 text-neutral-50 px-2 rounded-sm active:scale-98">
+      <p id="c" className="flex  justify-center items-center gap-1 selection:none cursor:pointer sm:hidden text-base bg-blue-700 text-neutral-50 px-2 rounded-sm active:scale-98">
         <Link href={"/team"}>Team</Link> <FaArrowRight />
       </p>
       <ul className="hidden md:flex items-center gap-1 lg:gap-2">
