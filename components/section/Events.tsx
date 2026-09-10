@@ -80,6 +80,7 @@ export default function Events() {
               fill
               sizes="100vw"
               className="object-cover"
+              loading="eager"
             />
 
             {/* Gradient */}
