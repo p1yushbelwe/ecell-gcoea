@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import LenisScrollProvider from "./provider/LenisScrollProvider";
 import Lenis from "lenis";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <LenisScrollProvider> {children}</LenisScrollProvider>{" "}
       </body>
+
+      <Script
+        src="https://cloud.umami.is/script.js"
+        data-website-id="ea5957b8-105f-42e6-9625-3ac08fbbba37"
+        strategy="afterInteractive"
+      />
     </html>
   );
 }

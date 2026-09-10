@@ -34,8 +34,8 @@ const items = [
   },
   {
     image: "https://ik.imagekit.io/feid7f6mz/speakers/sachinjadhao.webp",
-    label: "Sachin Jadhao",
-    label2: "Owner, RM Industries",
+    label: "Manoj Bhende",
+    label2: "Owner, Ganesha Group",
   },
   {
     image: "https://ik.imagekit.io/feid7f6mz/speakers/ranjitband.webp",

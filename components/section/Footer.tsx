@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import {
   FaInstagram,
   FaLinkedin,
   FaMapMarkerAlt,
   FaFacebook,
   FaYoutube,
+  FaHeart,
 } from "react-icons/fa";
 
 const scrollToSection = (id: string) => {
@@ -15,24 +17,19 @@ const scrollToSection = (id: string) => {
   });
 };
 
-const LinkedinLink =
-  "https://in.linkedin.com/company/e-cell-gcoea";
+const LinkedinLink = "https://in.linkedin.com/company/e-cell-gcoea";
 
-const YoutubeLink =
-  "https://www.youtube.com/@e-cellgcoea";
+const YoutubeLink = "https://www.youtube.com/@e-cellgcoea";
 
-const InstagramLink =
-  "https://www.instagram.com/ecellgcoea/";
+const InstagramLink = "https://www.instagram.com/ecellgcoea/";
 
-const FacebookLink =
-  "https://www.facebook.com/ecellgcoea/";
+const FacebookLink = "https://www.facebook.com/ecellgcoea/";
 
 export default function Footer() {
   return (
     <footer className="bg-zinc-950 text-neutral-200 font-inter">
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-16">
-
           {/* Section 1 — Brand / Social */}
           <div className="space-y-5">
             <h2 className="text-2xl font-semibold tracking-tight text-shadow-[0_2px_8px_rgba(255,255,255,0.15)]">
@@ -40,8 +37,8 @@ export default function Footer() {
             </h2>
 
             <p className="max-w-sm text-sm leading-6 text-neutral-400 text-shadow-[0_1px_5px_rgba(0,0,0,0.5)]">
-              Building ideas, creating experiences, and bringing people
-              together through technology and innovation.
+              Building ideas, creating experiences, and bringing people together
+              through technology and innovation.
             </p>
 
             <div className="flex items-center gap-4 pt-2">
@@ -155,6 +152,15 @@ export default function Footer() {
         <div className="mt-12 border-t border-neutral-700 pt-6 text-center text-xs text-neutral-500">
           <p>
             © {new Date().getFullYear()} E-CELL GCOEA | All rights reserved.
+          </p>
+          <p className="flex gap-1  justify-center items-center my-1 text-sm">
+            Made with <FaHeart className="text-neutral-200" /> by
+            <span className="text-neutral-200 underline underline-offset-2">
+              <Link href={"https://www.linkedin.com/in/piyushbelwe/"}>
+                Piyush Belwe
+              </Link>
+            </span>{" "}
+            (Technical Head)
           </p>
         </div>
       </div>

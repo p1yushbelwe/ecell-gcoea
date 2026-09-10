@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function Events() {
   const items = [
-    {
-      image: "https://ik.imagekit.io/feid7f6mz/events/pitchers1.jpg",
-      label: "Pitchers Game 2026",
-    },
+    // {
+    //   image: "https://ik.imagekit.io/feid7f6mz/events/pitchers1.jpg",
+    //   label: "Pitchers Game 2026",
+    // },
     {
       image: "https://ik.imagekit.io/feid7f6mz/events/pitchers2.webp",
       label: "Pitchers Game 2026",
@@ -21,10 +21,10 @@ export default function Events() {
       image: "https://ik.imagekit.io/feid7f6mz/events/nec1.webp",
       label: "National Entrepreneurship Challenge 25",
     },
-    {
-      image: "https://ik.imagekit.io/feid7f6mz/events/esammelan2.webp",
-      label: "E-Sammelan 2025",
-    },
+    // {
+    //   image: "https://ik.imagekit.io/feid7f6mz/events/esammelan2.webp",
+    //   label: "E-Sammelan 2025",
+    // },
   ];
   // https://ik.imagekit.io/feid7f6mz/events/esammelan2.webp?updatedAt=1788881085694
   return (
@@ -88,7 +88,7 @@ export default function Events() {
 
             {/* Text */}
             <div className="absolute bottom-0 left-0 px-5 py-2">
-              <h2 className="text-2xl font-medium tracking-tight text-neutral-100">
+              <h2 className="text-2xl font-medium tracking-tight text-neutral-100 leading-6">
                 {item.label}
               </h2>
             </div>
