@@ -28,6 +28,11 @@ const items = [
     label2: "Dean, GCoE Amravati",
   },
   {
+    image: "https://ik.imagekit.io/feid7f6mz/speakers/rbsharma.webp",
+    label: "Dr. R. B. Sharma",
+    label2: "Faculty Advisor of E-Cell GCOEA",
+  },
+  {
     image: "https://ik.imagekit.io/feid7f6mz/speakers/chandanjha.webp",
     label: "Mr. Chandan Jha",
     label2: "AVP @GeeksforGeeks",
