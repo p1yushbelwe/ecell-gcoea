@@ -32,7 +32,7 @@ export default function Navbar() {
         onClick={() => (window.location.href = "/")}
       >
         <Image
-          src={`https://ik.imagekit.io/feid7f6mz/ecellLogo.webp`}
+          src={`https://ik.imagekit.io/feid7f6mz/ecellgcoea/ecellLogo.webp`}
           alt="E-Cell GCOEA Logo"
           width={48}
           height={48}

@@ -12,7 +12,7 @@ export default function About() {
 <div className="flex-1 w-full max-w-md lg:max-w-xl mx-auto order-1 lg:order-2">
   <div className="relative aspect-video rounded-2xl overflow-hidden bg-neutral-900/60 border border-neutral-800 shadow-xl">
     <Image
-      src="https://ik.imagekit.io/feid7f6mz/events/pitchers1.jpg"
+      src="https://ik.imagekit.io/feid7f6mz/ecellgcoea/events/pitchers1.jpg"
       alt="E-Cell GCOEA Logo"
       fill
       className="object-cover p-2 rounded-2xl"

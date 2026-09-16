@@ -1,3 +1,4 @@
+"use client"
 import { FaTeamspeak } from "react-icons/fa";
 import Link from "next/link";
 import team from '@/app/team/team.json'

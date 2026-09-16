@@ -6,27 +6,27 @@ import Image from "next/image";
 export default function Events() {
   const items = [
     // {
-    //   image: "https://ik.imagekit.io/feid7f6mz/events/pitchers1.jpg",
+    //   image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/events/pitchers1.jpg",
     //   label: "Pitchers Game 2026",
     // },
     {
-      image: "https://ik.imagekit.io/feid7f6mz/events/pitchers2.webp",
+      image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/events/pitchers2.webp",
       label: "Pitchers Game 2026",
     },
     {
-      image: "https://ik.imagekit.io/feid7f6mz/events/esammelan1.webp",
+      image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/events/esammelan1.webp",
       label: "E-Sammelan 2025",
     },
     {
-      image: "https://ik.imagekit.io/feid7f6mz/events/nec1.webp",
+      image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/events/nec1.webp",
       label: "National Entrepreneurship Challenge 25",
     },
     // {
-    //   image: "https://ik.imagekit.io/feid7f6mz/events/esammelan2.webp",
+    //   image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/events/esammelan2.webp",
     //   label: "E-Sammelan 2025",
     // },
   ];
-  // https://ik.imagekit.io/feid7f6mz/events/esammelan2.webp?updatedAt=1788881085694
+  // https://ik.imagekit.io/feid7f6mz/ecellgcoea/events/esammelan2.webp?updatedAt=1788881085694
   return (
     <div
       id="events"
