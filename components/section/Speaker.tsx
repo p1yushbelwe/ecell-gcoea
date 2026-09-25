@@ -18,32 +18,33 @@ type GalleryItem = {
 
 const items = [
   {
-    image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/speakers/sameerkubde.webp",
+    image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/speakers/sameerkubde.webp",
+
     label: "Sameer Kubde",
     label2: "Owner, Kubde Jewellers",
   },
   {
-    image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/speakers/rmmetkar.webp",
+    image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/speakers/rmmetkar.webp",
     label: "Prof. R. M. Metkar",
     label2: "Dean, GCoE Amravati",
   },
   {
-    image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/speakers/rbsharma.webp",
+    image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/speakers/rbsharma.webp",
     label: "Dr. R. B. Sharma",
     label2: "Faculty Advisor of E-Cell GCOEA",
   },
   {
-    image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/speakers/chandanjha.webp",
+    image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/speakers/chandanjha.webp",
     label: "Mr. Chandan Jha",
     label2: "AVP @GeeksforGeeks",
   },
   {
-    image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/speakers/sachinjadhao.webp",
+    image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/speakers/sachinjadhao.webp",
     label: "Manoj Bhende",
     label2: "Owner, Ganesha Group",
   },
   {
-    image: "https://ik.imagekit.io/feid7f6mz/ecellgcoea/speakers/ranjitband.webp",
+    image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/speakers/ranjitband.webp",
     label: "Ranjit Band",
     label2: "Alumnus GCoE Amravati",
   },
