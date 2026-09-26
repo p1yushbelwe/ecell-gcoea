@@ -10,6 +10,7 @@ import Team from "@/components/section/Team";
 // import Reach from "@/components/section/Contact";
 import Contact from "@/components/section/Contact";
 import Footer from "@/components/section/Footer";
+import Blog from "@/components/section/Blog";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Events />
       <Speaker />
       <Team />
+      <Blog />
       <Contact />
       <Footer />
     </div>

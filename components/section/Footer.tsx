@@ -97,6 +97,12 @@ export default function Footer() {
               >
                 Events
               </button>
+              <button
+                onClick={() => window.location.href = "/blogs"}
+                className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+              >
+                Blogs
+              </button>
 
               <button
                 onClick={() => scrollToSection("about")}

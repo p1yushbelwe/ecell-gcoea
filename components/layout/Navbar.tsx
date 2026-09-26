@@ -20,7 +20,8 @@ const links = [
   { label: "About" },
   { label: "Events" },
   { label: "Teams", href: "/team" },
-  { label: "Contact" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

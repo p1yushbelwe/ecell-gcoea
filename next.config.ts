@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: [
     "10.114.21.97",
     "10.204.9.97",
+    "10.62.154.97",
     "detail-savor-sleeve.ngrok-free.dev",
   ],
 };
