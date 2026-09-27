@@ -1,36 +1,40 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeftLong, FaLeftRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
+import {
+  defaultNavbarItems,
+  navbarItemHref,
+  type NavbarItem,
+} from "./navigation";
+import MobileNavigation from "./MobileNavigation";
 
-const scrollToSection = (id: string) => {
-  document.getElementById(id)?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
+type NavbarProps = {
+  items?: NavbarItem[];
 };
 
-type l = {
-  label: string;
-  href: string;
-};
+export default function Navbar({ items = defaultNavbarItems }: NavbarProps) {
+  const router = useRouter();
 
-const links = [
-  { label: "About" },
-  { label: "Events" },
-  { label: "Teams", href: "/team" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Contact", href: "/contact" },
-];
+  const handleSectionClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    item: NavbarItem,
+  ) => {
+    if (!("sectionId" in item) || !item.sectionId) return;
 
-export default function Navbar() {
+    const section = document.getElementById(item.sectionId);
+    if (!section) return;
+
+    event.preventDefault();
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="flex items-center justify-between px-4 sm:px-6 py-3 font-inter border border-b-neutral-800">
       {/* Logo + Text (always visible) */}
       <div
-        className="flex items-center gap-2 sm:gap-3 cursor-pointer "
-        onClick={() => (window.location.href = "/")}
+        className="flex items-center gap-2 sm:gap-3 cursor-pointer"
+        onClick={() => router.push("/")}
       >
         <Image
           src={`https://ik.imagekit.io/ecellgcoea/ecell-website/ecellLogo.webp`}
@@ -45,26 +49,21 @@ export default function Navbar() {
         </p>
       </div>
 
-      {/* Navigation Links - Hidden on mobile */}
-      <p id="c" className="flex  justify-center items-center gap-1 selection:none cursor:pointer sm:hidden text-base bg-blue-700 text-neutral-50 px-2 rounded-sm active:scale-98">
-        <Link href={"/team"}>Team</Link> <FaArrowRight />
-      </p>
+      <MobileNavigation items={items} />
       <ul className="hidden md:flex items-center gap-1 lg:gap-2">
-        {links.map((item, i) => (
-          <li key={i}>
+        {items.map((item) => (
+          <li key={`${item.label}-${navbarItemHref(item)}`}>
             <button
-              onClick={() => {
-                scrollToSection(item.label.toLowerCase());
-              }}
               className="px-3 py-1.5 text-sm lg:text-base text-neutral-200 
                          rounded-md hover:bg-neutral-800 hover:text-white 
                          transition-colors duration-200"
             >
-              {item.href ? (
-                <Link href={"" + item.href}>{item.label}</Link>
-              ) : (
-                <span>{item.label}</span>
-              )}
+              <Link
+                href={navbarItemHref(item)}
+                onClick={(event) => handleSectionClick(event, item)}
+              >
+                {item.label}
+              </Link>
             </button>
           </li>
         ))}

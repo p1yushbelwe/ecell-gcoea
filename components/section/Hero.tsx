@@ -48,7 +48,7 @@ export default function Hero() {
         </div>
 
         {/* Navbar */}
-        <div className="relative z-10">
+        <div className="relative z-30">
           <Navbar />
         </div>
 
