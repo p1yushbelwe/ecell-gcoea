@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   FaInstagram,
   FaLinkedin,
@@ -9,13 +10,6 @@ import {
   FaYoutube,
   FaHeart,
 } from "react-icons/fa";
-
-const scrollToSection = (id: string) => {
-  document.getElementById(id)?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
-};
 
 const LinkedinLink = "https://in.linkedin.com/company/e-cell-gcoea";
 
@@ -26,6 +20,22 @@ const InstagramLink = "https://www.instagram.com/ecellgcoea/";
 const FacebookLink = "https://www.facebook.com/ecellgcoea/";
 
 export default function Footer() {
+  const router = useRouter();
+
+  const navigateToSection = (id: string) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      return;
+    }
+
+    router.push(`/#${id}`);
+  };
+
   return (
     <footer className="bg-zinc-950 text-neutral-200 font-inter">
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-10">
@@ -92,34 +102,34 @@ export default function Footer() {
 
             <nav className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
               <button
-                onClick={() => scrollToSection("events")}
+                onClick={() => navigateToSection("events")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 Events
               </button>
               <button
-                onClick={() => window.location.href = "/blogs"}
+                onClick={() => router.push("/blogs")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 Blogs
               </button>
 
               <button
-                onClick={() => scrollToSection("about")}
+                onClick={() => navigateToSection("about")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 About
               </button>
 
               <button
-                onClick={() => scrollToSection("team")}
+                onClick={() => navigateToSection("team")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 Team
               </button>
 
               <button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => navigateToSection("contact")}
                 className="w-fit text-neutral-400 transition-all duration-300 hover:translate-x-1 hover:text-white hover:text-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
                 Contact
