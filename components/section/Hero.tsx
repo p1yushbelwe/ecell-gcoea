@@ -1,4 +1,3 @@
-
 import DotGrid from "../DotGrid";
 
 import {
@@ -12,34 +11,28 @@ import {
 import Navbar from "../layout/Navbar";
 import { AuroraText } from "../ui/aurora-text";
 
-const LinkedinLink =
-  "https://in.linkedin.com/company/e-cell-gcoea";
+const LinkedinLink = "https://in.linkedin.com/company/e-cell-gcoea";
 
-const YoutubeLink =
-  "https://www.youtube.com/@e-cellgcoea";
+const YoutubeLink = "https://www.youtube.com/@e-cellgcoea";
 
-const InstagramLink =
-  "https://www.instagram.com/ecellgcoea/";
+const InstagramLink = "https://www.instagram.com/ecellgcoea/";
 
-const FacebookLink =
-  "https://www.facebook.com/ecellgcoea/";
+const FacebookLink = "https://www.facebook.com/ecellgcoea/";
 
-const EmailLink =
-  "mailto:ecell@gcoea.ac.in";
+const EmailLink = "mailto:ecell@gcoea.ac.in";
 
 export default function Hero() {
   return (
     <div>
       <div className="relative overflow-hidden bg-neutral-950">
-
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <DotGrid
             dotSize={3}
             gap={15}
-            baseColor="#404040"
-            activeColor="#73C6FB"
-            proximity={110}
+            baseColor="#1e293b"
+            activeColor="#0466c8"
+            proximity={200}
             shockRadius={1}
             shockStrength={0}
             resistance={1000}
@@ -55,7 +48,6 @@ export default function Hero() {
         {/* Hero Content */}
         <div className="relative z-10 flex min-h-[calc(75dvh)] sm:min-h-[calc(100dvh-80px)] items-center justify-center px-4 sm:px-6">
           <div className="mx-auto max-w-4xl text-center">
-
             {/* Tags */}
             <div className="flex justify-center">
               <ul className="mb-8 flex list-disc gap-6 rounded-full border border-blue-900 bg-blue-950/40 px-6 py-1 text-sm *:font-medium *:text-blue-400/80 *:text-shadow-lg">
@@ -68,7 +60,6 @@ export default function Hero() {
             {/* Main Title */}
             <h1 className="mb-4 text-4xl font-semibold tracking-tight sm:mb-4 sm:text-5xl md:text-6xl lg:text-7xl">
               <span className="text-neutral-100">The</span>{" "}
-
               <AuroraText
                 colors={["#1D4ED8", "#3B82F6", "#7DD3FC"]}
                 speed={2.5}
@@ -92,7 +83,6 @@ export default function Hero() {
             {/* Social Icons */}
             <div className="mt-8 sm:mt-10">
               <ul className="flex flex-wrap justify-center gap-2">
-
                 {/* Instagram */}
                 <li>
                   <a
@@ -165,14 +155,11 @@ export default function Hero() {
                     </span>
                   </a>
                 </li>
-
               </ul>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   );
 }
-

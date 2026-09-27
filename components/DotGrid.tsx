@@ -100,6 +100,9 @@ const DotGrid: React.FC<DotGridProps> = ({
     const { width, height } = wrap.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
 
+    pointerRef.current.x = width / 2;
+    pointerRef.current.y = height / 2;
+
     canvas.width = width * dpr;
     canvas.height = height * dpr;
     canvas.style.width = `${width}px`;

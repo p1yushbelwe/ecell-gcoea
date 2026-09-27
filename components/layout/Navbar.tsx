@@ -30,7 +30,7 @@ export default function Navbar({ items = defaultNavbarItems }: NavbarProps) {
   };
 
   return (
-    <div className="flex items-center justify-between px-4  font-inter bg-transparent backdrop-blur-xs mt-2 mx-2 py-2 border border-neutral-500/30 rounded-xl">
+    <div className="flex items-center justify-between px-4  font-inter bg-transparent backdrop-blur-xs mx-2 py-2 mt-2 border border-neutral-500/30 rounded-xl">
       {/* Logo + Text (always visible) */}
       <div
         className="flex items-center gap-2 sm:gap-3 cursor-pointer"
