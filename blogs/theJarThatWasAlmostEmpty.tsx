@@ -42,11 +42,18 @@ export default function theJarThatWasAlmostEmpty() {
             In 1975 psychologists placed biscuits in two jars. One was full
             while the other nearly empty. The biscuits were identical yet people
             rated the emptier jar's biscuits as far more desirable. Nothing had
-            changed except availability. This is scarcity. The brain treats rare
+            changed except availability. This is scarcity.  
+          </p>
+
+          <p className="sm:text-[20px]/7 text-[18px]/7 text-neutral-300/98 mb-6">
+            The brain treats rare
             things as valuable things because for most of human history whatever
             was limited often meant survival. When something feels scarce the
             mind stops asking is this good and starts asking will I lose this
-            chance. FOMO is scarcity's louder cousin. It is not just about
+            chance. FOMO is scarcity's louder cousin.
+          </p>
+          <p className="sm:text-[20px]/7 text-[18px]/7 text-neutral-300/98 mb-6">
+            It is not just about
             missing an item. It is about missing what everyone else seems to be
             having. Watching others rush convinces the brain that rushing too is
             the only safe move. Kinder Joy and Britannia both proved this well.
@@ -56,7 +63,6 @@ export default function theJarThatWasAlmostEmpty() {
             chasing the same nostalgia and scarcity combo and buyers could not
             resist either.
           </p>
-
           <p className="sm:text-[20px]/7 text-[18px]/7 text-neutral-300/98 mb-6">
             Here is where it builds to something remarkable. During a major
             online sale Flipkart sold half a million products within sixty

@@ -1,10 +1,12 @@
 import theJarThatWasAlmostEmpty from "@/blogs/theJarThatWasAlmostEmpty";
+import thePriceThatWasAlmost1000 from "@/blogs/thePriceThatWasAlmost1000";
 
 
 
 
 const blogs = {
   "the-jar-that-was-almost-empty": theJarThatWasAlmostEmpty,
+  "the-price-that-was-almost-1000": thePriceThatWasAlmost1000,
 };
 
 export function generateStaticParams() {

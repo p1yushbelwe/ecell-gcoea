@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/section/Footer";
 import Link from "next/link";
+  import blogs from "./blogs.json"; 
 // import Social from "@/components/layout/Social"
 
 export default function BlogsPage() {
@@ -12,24 +13,25 @@ export default function BlogsPage() {
           Blogs by E-Cell GCOEA
         </h1>
 
-        <div className="bg-neutral-950 px-1  py-4 rounded-lg shadow-lg">
-          <div className="bg-neutral-900 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <p className="text-neutral-400/98 mb-2">Friday, September 26th 2026</p>
-            <h1 className="text-2xl font-semibold mb-2 text-neutral-200 tracking-tight text-balance">
-              Entrepreneurship's best kept secret : The Jar That Was Almost
-              Empty
-            </h1>
-            <p className="text-neutral-300 leading-relaxed">
-              In 1975 psychologists placed biscuits in two jars. One was full
-              while the other nearly empty. The biscuits were identical yet
-              people rated the emptier jar's biscuits as far more desirable.
-              Nothing had changed except availability.
-            </p>
+        <div className="bg-neutral-950 px-1 py-4 rounded-lg shadow-lg">
+          {blogs.map((blog) => (
+            <div
+              key={blog.id}
+              className="bg-neutral-900 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 my-4"
+            >
+              <h2 className="text-2xl font-semibold mb-2 text-neutral-200 tracking-tight text-balance">
+                {blog.title}
+              </h2>
+              <p className="text-neutral-400 text-sm mb-4">
+                {blog.date}
+              </p>
+              <p className="text-neutral-300 leading-relaxed">{blog.description}</p>
 
-            <button className="mt-4 px-2 py-0.5 bg-blue-700 text-white rounded-sm hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
-              <Link href="/blogs/the-jar-that-was-almost-empty">Read more</Link>
-            </button>
-          </div>
+              <button className="mt-4 px-2 py-0.5 bg-blue-700 text-white rounded-sm hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <Link href={blog.link}>Read more</Link>
+              </button>
+            </div>
+          ))}
         </div>
       </div>
       <Footer />
