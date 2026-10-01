@@ -1,5 +1,5 @@
 import DotGrid from "../DotGrid";
-
+import { motion } from "motion/react";
 import {
   FaFacebook,
   FaInstagram,
@@ -49,39 +49,67 @@ export default function Hero() {
         <div className="relative z-10 flex min-h-[calc(75dvh)] sm:min-h-[calc(100dvh-80px)] items-center justify-center px-4 sm:px-6">
           <div className="mx-auto max-w-4xl text-center">
             {/* Tags */}
-            <div className="flex justify-center">
-              <ul className="mb-8 flex list-disc gap-6 rounded-full border border-blue-900 bg-blue-950/40 px-6 py-1 text-sm *:font-medium *:text-blue-400/80 *:text-shadow-lg">
+            <motion.div
+              className="flex justify-center"
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <ul className="my-8 flex list-disc gap-8 rounded-full border border-blue-700 bg-blue-700/20 px-6 py-1 text-sm *:font-normal *:text-blue-600 *:text-shadow-lg">
                 <li>Learn</li>
                 <li>Build</li>
                 <li>Innovate</li>
               </ul>
-            </div>
+            </motion.div>
 
             {/* Main Title */}
-            <h1 className="mb-4 text-4xl font-semibold tracking-tight sm:mb-4 sm:text-5xl md:text-6xl lg:text-7xl">
-              <span className="text-neutral-100">The</span>{" "}
-              <AuroraText
-                colors={["#1D4ED8", "#3B82F6", "#7DD3FC"]}
-                speed={2.5}
-              >
-                Entrepreneurship Cell
-              </AuroraText>
-            </h1>
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <h1 className="mb-4 text-4xl font-semibold tracking-tight sm:mb-4 sm:text-5xl md:text-6xl lg:text-7xl">
+                <span className="text-neutral-100">The</span>{" "}
+                <AuroraText
+                  colors={["#1D4ED8", "#3B82F6", "#7DD3FC"]}
+                  speed={2.5}
+                >
+                  Entrepreneurship Cell
+                </AuroraText>
+              </h1>
+            </motion.div>
 
             {/* College Name */}
-            <p className="text-lg/5 font-medium tracking-normal text-neutral-100 sm:text-xl/7 md:text-2xl/7 lg:text-3xl/7">
-              Government College Of Engineering
-              <br />
-              <span className="sm:ml-1">Amravati</span>
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <p className="text-lg/5 font-medium tracking-normal text-neutral-100 sm:text-xl/7 md:text-2xl/7 lg:text-3xl/7">
+                Government College Of Engineering
+                <br />
+                <span className="sm:ml-1">Amravati</span>
+              </p>
+            </motion.div>
 
             {/* Tagline */}
-            <p className="mt-4 text-base italic text-neutral-300/90 sm:mt-6 sm:text-lg md:text-xl">
-              "Empowering the Next Generation of Founders"
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <p className="mt-4 text-base italic text-neutral-300/90 sm:mt-6 sm:text-lg md:text-xl">
+                &quot;Empowering the Next Generation of Founders&quot;
+              </p>
+            </motion.div>
 
             {/* Social Icons */}
-            <div className="mt-8 sm:mt-10">
+            <motion.div
+              className="mt-8 sm:mt-10"
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            >
               <ul className="flex flex-wrap justify-center gap-2">
                 {/* Instagram */}
                 <li>
@@ -156,7 +184,7 @@ export default function Hero() {
                   </a>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

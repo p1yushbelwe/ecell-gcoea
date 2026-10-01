@@ -52,12 +52,12 @@ const items = [
 
 export default function Speaker() {
   return (
-    <section className="bg-neutral-950/98 px-4 py-4 font-inter">
+    <section className="bg-neutral-950/98 py-4 font-inter">
       <h1 className="text-center text-3xl font-medium tracking-tighter text-neutral-100  *:bg-blue-700 text-shadow-2xs sm:text-3xl">
-        <span className="px-4 py-2">Past Speakers and Guests</span>
+        <span className="mx-4 px-4 py-2">Past Speakers and Guests</span>
       </h1>
 
-      <div className="mx-4 sm:mx-auto mt-10 max-w-6xl">
+      <div className="mx-8 sm:mx-auto my-16 max-w-5xl">
         <Carousel
           opts={{
             align: "start",
@@ -65,7 +65,7 @@ export default function Speaker() {
           }}
           plugins={[
             Autoplay({
-              delay: 1500,
+              delay: 1100,
             }),
           ]}
         >
@@ -73,7 +73,7 @@ export default function Speaker() {
             {items.map((item, i) => (
               <CarouselItem
                 key={i}
-                className="basis-full pl-4 sm:basis-1/2 lg:basis-1/3"
+                className="basis-full pl-8 sm:basis-1/2 lg:basis-1/3"
               >
                 <div className="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 shadow-xl">
                   <div className="relative aspect-4/5 overflow-hidden">

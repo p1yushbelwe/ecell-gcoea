@@ -1,8 +1,8 @@
-"use client";
+// "use client";
 import { FaArrowRight } from "react-icons/fa6";
 import AccordionGallery from "../AccordionGallery";
 import Image from "next/image";
-
+import { motion } from "motion/react";
 export default function Events() {
   const items = [
     // {
@@ -10,15 +10,18 @@ export default function Events() {
     //   label: "Pitchers Game 2026",
     // },
     {
-      image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/events/pitchers2.webp",
+      image:
+        "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/events/pitchers2.webp",
       label: "Pitchers Game 2026",
     },
     {
-      image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/events/esammelan1.webp",
+      image:
+        "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/events/esammelan1.webp",
       label: "E-Sammelan 2025",
     },
     {
-      image: "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/events/nec1.webp",
+      image:
+        "https://ik.imagekit.io/ecellgcoea/ecell-website/ecellgcoea/events/nec1.webp",
       label: "National Entrepreneurship Challenge 25",
     },
     // {
@@ -30,20 +33,22 @@ export default function Events() {
   return (
     <div
       id="events"
-      className="font-inter sm:min-h-dvh bg-neutral-950/98 px-4 pt-16 sm:p-16"
+      className="font-inter min-h-dvh bg-neutral-950/98 px-8 p-16 sm:p-16"
     >
-      <h1 className="text-3xl sm:text-4xl text-neutral-100 tracking-tighter font-semibold">
-        Events and Programs
-      </h1>
-      <br />
-      <p className="text-neutral-500 text-pretty  md:w-3/4">
-        Discover our upcoming events and ongoing programs designed to inspire,
-        connect, and create lasting impact. From workshops and community
-        gatherings to specialized initiatives, there’s something for everyone.
-        Stay updated, get involved, and be part of meaningful experiences that
-        matter.
-      </p>
-      <br />
+      <motion.div>
+        <h1 className="text-3xl sm:text-4xl text-neutral-100 tracking-tight font-semibold">
+          Events and Programs
+        </h1>
+        <p className="text-neutral-400 text-pretty md:w-3/4 w-full mt-4 mb-16">
+          Discover our upcoming events and ongoing programs designed to inspire,
+          connect, and create lasting impact. From workshops and community
+          gatherings to specialized initiatives, there’s something for everyone.
+          Stay updated, get involved, and be part of meaningful experiences that
+          matter.
+        </p>
+      </motion.div>
+
+    
       {/* Desktop */}
       <div className="hidden md:block">
         <AccordionGallery
@@ -52,7 +57,7 @@ export default function Events() {
           expandRatio={0.5}
           trigger="hover"
           accentColor="#ffffff"
-          overlayColor="none"
+          overlayColor="transparent"
           textColor="#ffffff"
           grayscale
           showLabels
@@ -68,11 +73,11 @@ export default function Events() {
         />
       </div>
 
-      <div className="block md:hidden ">
+      <div className="block md:hidden">
         {items.map((item, i) => (
           <div
             key={i}
-            className="relative aspect-video w-full my-4 overflow-hidden rounded-xl border-2 border-neutral-700/80 shadow-xs shadow-white/10"
+            className="relative aspect-video w-full overflow-hidden rounded-md border-2 border-neutral-700/80 shadow-xs my-8"
           >
             <Image
               src={item.image}
@@ -80,7 +85,7 @@ export default function Events() {
               fill
               sizes="100vw"
               className="object-cover"
-              loading="eager"
+              loading="lazy"
             />
 
             {/* Gradient */}
@@ -97,13 +102,13 @@ export default function Events() {
       </div>
 
       {/* <br /> */}
-      <div>
+      {/* <div>
         <button className="text-center mb-16 sm:mb-4 bg-blue-700 text-neutral-50 shadow-xs rounded-sm text-base sm:text-sm font-normal px-4 py-1 tracking-tight active:scale-98 hover:bg-blue-700/90 transition duration-150 cursor-pointer mt-2 sm:mt-8">
           <p className="flex justify-center items-center gap-1">
             Explore More <FaArrowRight />
           </p>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
