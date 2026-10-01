@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
     "10.177.58.97",
     "10.204.9.97",
     "10.62.154.97",
+    "10.100.59.97",
     "detail-savor-sleeve.ngrok-free.dev",
   ],
 };
