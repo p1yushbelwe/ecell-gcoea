@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/section/Footer";
 import Link from "next/link";
   import blogs from "./blogs.json"; 
+import { ChevronRight } from "lucide-react";
 // import Social from "@/components/layout/Social"
 
 export default function BlogsPage() {
@@ -27,8 +28,10 @@ export default function BlogsPage() {
               </p>
               <p className="text-neutral-300 leading-relaxed">{blog.description}</p>
 
-              <button className="mt-4 px-2 py-0.5 bg-blue-700 text-white rounded-sm hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                <Link href={blog.link}>Read more</Link>
+              <button className="mt-4 text-blue-500  hover:text-neutral-300 active:text-neutral-300 transition duration-150">
+                <Link href={blog.link} className="flex items-center">
+                  Read more <ChevronRight/>
+                </Link>
               </button>
             </div>
           ))}

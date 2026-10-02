@@ -8,7 +8,7 @@ export default function theJarThatWasAlmostEmpty() {
     <div className="py-0.5 font-inter bg-neutral-950 min-h-screen selection:bg-gray-500/20 selection:text-blue-600/8">
       
       <Navbar />
-      <div className="max-w-3xl mx-auto sm:px-4 px-3 py-8">
+      <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-4">
           <p className="text-neutral-400/98">Friday, September 26th 2026</p>
         </div>

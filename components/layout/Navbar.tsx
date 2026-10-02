@@ -51,7 +51,7 @@ export default function Navbar({ items = defaultNavbarItems }: NavbarProps) {
           className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
           priority
         />
-        <p className="text-neutral-100 text-lg sm:text-xl font-semibold tracking-tight">
+        <p className="text-neutral-100 text-lg sm:text-xl font-semibold tracking-tight select-none">
           E-CELL GCOEA
         </p>
       </div>

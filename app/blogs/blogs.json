@@ -1,16 +1,16 @@
 [
     {
-        "id": "1",
-        "date":"Friday, September 26th 2026",
-        "title": "The Jar That Was Almost Empty",
-        "description": "In 1975 psychologists placed biscuits in two jars. One was full while the other nearly empty. The biscuits were identical yet people rated the emptier jar's biscuits as far more desirable. Nothing had changed except availability.",
-        "link": "/blogs/the-jar-that-was-almost-empty"
-    },
-    {
         "id": "2",
         "date":"Wednesday, September 29th 2026",
         "title": "The Price That Was Almost 1000",
         "description": "Imagine walking into a store with ₹1000 in your pocket. You spot a shirt marked ₹999 and think: That is within my budget. However, if the same shirt was marked ₹1000 you might feel like it has crossed your price boundary.",
         "link": "/blogs/the-price-that-was-almost-1000"
+    },
+    {
+        "id": "1",
+        "date":"Friday, September 26th 2026",
+        "title": "The Jar That Was Almost Empty",
+        "description": "In 1975 psychologists placed biscuits in two jars. One was full while the other nearly empty. The biscuits were identical yet people rated the emptier jar's biscuits as far more desirable. Nothing had changed except availability.",
+        "link": "/blogs/the-jar-that-was-almost-empty"
     }
 ]
